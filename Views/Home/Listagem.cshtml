@@ -1,0 +1,26 @@
+@model List<ItemServico>
+
+    <h2>Listagem dos serviços cadastrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Valor</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.item</td>
+                    <td>@item.valor</td>
+                    <td>@item.quantidade</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>Total de serviços: @Servico.TotalizaServicos()</p>
